@@ -11,7 +11,7 @@ export default function CatFactsContainer() {
       {error ? (
         <div className="text-red-600">{ERROR_MESSAGE}</div>
       ) : (
-        catFacts.map(({ user, fact }, index) => <CatFactCard key={index} user={user} fact={fact} />)
+        catFacts.map(({ user, fact }) => <CatFactCard key={user} user={user} fact={fact} />)
       )}
     </div>
   );
