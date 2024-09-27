@@ -1,0 +1,53 @@
+export const CAT_FACTS_DATA = {
+  current_page: 1,
+  data: [
+    {
+      fact: "Unlike dogs, cats do not have a sweet tooth. Scientists believe this is due to a mutation in a key taste receptor.",
+      length: 114,
+    },
+    {
+      fact: "When a cat chases its prey, it keeps its head level. Dogs and humans bob their heads up and down.",
+      length: 97,
+    },
+    {
+      fact: "The technical term for a cat\u2019s hairball is a \u201cbezoar.\u201d",
+      length: 54,
+    },
+    { fact: "A group of cats is called a \u201cclowder.\u201d", length: 38 },
+    {
+      fact: "A cat can\u2019t climb head first down a tree because every claw on a cat\u2019s paw points the same way. To get down from a tree, a cat must back down.",
+      length: 142,
+    },
+    {
+      fact: "Cats make about 100 different sounds. Dogs make only about 10.",
+      length: 62,
+    },
+  ],
+  first_page_url: "https://catfact.ninja/facts?page=1",
+  from: 1,
+  last_page: 56,
+  last_page_url: "https://catfact.ninja/facts?page=56",
+  links: [
+    { url: null, label: "Previous", active: false },
+    { url: "https://catfact.ninja/facts?page=1", label: "1", active: true },
+    { url: "https://catfact.ninja/facts?page=2", label: "2", active: false },
+    { url: "https://catfact.ninja/facts?page=3", label: "3", active: false },
+    { url: "https://catfact.ninja/facts?page=4", label: "4", active: false },
+    { url: "https://catfact.ninja/facts?page=5", label: "5", active: false },
+    { url: "https://catfact.ninja/facts?page=6", label: "6", active: false },
+    { url: "https://catfact.ninja/facts?page=7", label: "7", active: false },
+    { url: "https://catfact.ninja/facts?page=8", label: "8", active: false },
+    { url: "https://catfact.ninja/facts?page=9", label: "9", active: false },
+    { url: "https://catfact.ninja/facts?page=10", label: "10", active: false },
+    { url: null, label: "...", active: false },
+    { url: "https://catfact.ninja/facts?page=55", label: "55", active: false },
+    { url: "https://catfact.ninja/facts?page=56", label: "56", active: false },
+    { url: "https://catfact.ninja/facts?page=2", label: "Next", active: false },
+  ],
+  next_page_url: "https://catfact.ninja/facts?page=2",
+  path: "https://catfact.ninja/facts",
+  per_page: 6,
+  prev_page_url: null,
+  to: 6,
+  total: 332,
+};

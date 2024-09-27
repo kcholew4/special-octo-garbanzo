@@ -1,6 +1,6 @@
 import type { CatFactsAPIResponse, RandomUserAPIResponse } from "./types";
 
-const fetchCatFacts = async () => {
+export const fetchCatFacts = async () => {
   // https://publicapis.io/cat-facts-api was not responding.
   const url = new URL("https://catfact.ninja/facts");
 
@@ -14,7 +14,7 @@ const fetchCatFacts = async () => {
   }
 };
 
-const fetchRandomUsers = async () => {
+export const fetchRandomUsers = async () => {
   const url = new URL("https://randomuser.me/api/");
 
   url.searchParams.set("results", "6");
@@ -25,25 +25,4 @@ const fetchRandomUsers = async () => {
   } catch (error) {
     throw new Error(`error fetching random users: ${error}`);
   }
-};
-
-export const getUsersWithFacts = async () => {
-  const factsApiResponse = await fetchCatFacts();
-  const usersApiResponse = await fetchRandomUsers();
-
-  const facts = factsApiResponse.data.map(({ fact }) => fact);
-  const users = usersApiResponse.results.map(
-    ({ name }) => `${name.first} ${name.last}`
-  );
-
-  const factsWithUsers = facts.map((fact, index) => {
-    const user = users[index];
-
-    return {
-      user,
-      fact,
-    };
-  });
-
-  return factsWithUsers;
 };
